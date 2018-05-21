@@ -14,6 +14,12 @@ module.exports = {
           jsx: `react`
         }
       }
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography.js`
+      }
     }
   ],
 }
