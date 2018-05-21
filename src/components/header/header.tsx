@@ -4,6 +4,8 @@ import Link from 'gatsby-link'
 import Menu from '../menu'
 import { Container, Wrapper, HeaderButton, Title } from './components'
 
+import { AccentColor }  from '../../utils/colors'
+
 interface HeaderProps {
   siteTitle: string
 }
@@ -28,7 +30,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
             <Link
               to="/"
               style={{
-                color: '#4f6d7a'
+                color: AccentColor
               }}
             >
               {this.props.siteTitle}

@@ -1,12 +1,21 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
+
+import Section from '../components/section/section'
 
 const IndexPage = () => (
   <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Section accent>
+      About
+    </Section>
+    <Section title="Performances">
+      See All Performances ->
+    </Section>
+    <Section title="Watch & Listen">
+      Watch & Listen
+    </Section>
+    <Section title="News">
+      News
+    </Section>
   </div>
 )
 
