@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import {
+  Grid, Card,
   PerformanceCards,
   PreviewButton,
   Section
@@ -21,6 +22,10 @@ const IndexPage = () => (
     </Section>
     <Section title="Watch & Listen">
       <PreviewButton label="See All Videos and Recordings" />
+      <Grid>
+        <Card>Preview Video</Card>
+        <Card>Preview Audio</Card>
+      </Grid>
     </Section>
     <Section title="News">
       <PreviewButton label="See All Latest News" />
