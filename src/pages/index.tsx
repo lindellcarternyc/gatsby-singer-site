@@ -7,9 +7,7 @@ import {
 } from '../components'
 
 import Data from '../data'
-
 const { performances } = Data
-console.log(Data)
 
 
 const IndexPage = () => (

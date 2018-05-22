@@ -3,17 +3,18 @@ import * as React from 'react'
 import styledComponents from 'styled-components'
 import styledComponentsTS from 'styled-components-ts'
 
+// Models
 import {
   PerformanceModel, PerformanceDatesModel
 } from '../../models/performance-model'
 
+// Utils
 import { Tablet } from '../../utils/breakpoints'
 
 const typography = require('../../utils/typography')
-
 const bodyColor = typography.options.bodyColor
 
-
+// Components
 const Container = styledComponentsTS<{column?: number}>(styledComponents.div)`
   border: 1px solid ${bodyColor};
   text-align: center;
