@@ -1,11 +1,7 @@
-export interface PerformanceDatesModel {
-  year: string
-  month: string
-  days: string[]
-}
+import { DatesModel } from './dates-model'
 
 export interface PerformanceModel {
-  dates: PerformanceDatesModel,
+  dates: DatesModel,
   title: string
   subtitle?: string
   venue: string
