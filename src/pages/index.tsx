@@ -1,9 +1,16 @@
 import * as React from 'react'
 
 import {
+  PerformanceCards,
   PreviewButton,
   Section
 } from '../components'
+
+import Data from '../data'
+
+const { performances } = Data
+console.log(Data)
+
 
 const IndexPage = () => (
   <div>
@@ -12,6 +19,7 @@ const IndexPage = () => (
     </Section>
     <Section title="Performances">
       <PreviewButton label="See All Performances" />
+      <PerformanceCards performances={performances} />
     </Section>
     <Section title="Watch & Listen">
       <PreviewButton label="See All Videos and Recordings" />
