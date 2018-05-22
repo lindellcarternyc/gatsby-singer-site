@@ -1,6 +1,9 @@
 import * as React from 'react'
 
-import Section from '../components/section/section'
+import {
+  PreviewButton,
+  Section
+} from '../components'
 
 const IndexPage = () => (
   <div>
@@ -8,13 +11,13 @@ const IndexPage = () => (
       About
     </Section>
     <Section title="Performances">
-      See All Performances ->
+      <PreviewButton label="See All Performances" />
     </Section>
     <Section title="Watch & Listen">
-      Watch & Listen
+      <PreviewButton label="See All Videos and Recordings" />
     </Section>
     <Section title="News">
-      News
+      <PreviewButton label="See All Latest News" />
     </Section>
   </div>
 )
