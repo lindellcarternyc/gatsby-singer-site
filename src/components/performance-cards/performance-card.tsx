@@ -85,7 +85,7 @@ export default (props: PerformanceCardProps) => {
     <Container column={props.column}>
       <PerformanceDates { ...dates }/>
       <Title>{title}</Title>
-      {subtitle !== undefined && <SubTitle>The Duke</SubTitle>}
+      {subtitle !== undefined && <SubTitle>{subtitle}</SubTitle>}
       <Divider />
       <Text>{venue}</Text>
       <Text>{location.city}, {location.region}</Text>
