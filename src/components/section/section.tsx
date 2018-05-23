@@ -5,14 +5,12 @@ import styledComponentsTS from 'styled-components-ts'
 
 import SectionTitle from './section-title'
 
-import { AccentColor } from '../../utils/colors'
+import { TextColor, AccentBackgroundColor } from '../../utils/colors'
 
 const Container = styledComponentsTS<{accent?: boolean}>(styledComponents.section)`
-  border: 1px solid;
   margin-bottom: 1rem;
   padding: 1rem;
-  background: ${props => props.accent ? AccentColor : 'white'}
-  color: ${props => props.accent ? 'white' : 'inherit'}
+  background: ${props => props.accent ? AccentBackgroundColor : 'white'}
 `
 
 interface SectionProps {

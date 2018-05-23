@@ -20,7 +20,7 @@ const IndexPage = () => (
       <PreviewButton label="See All Performances" />
       <PerformanceCards performances={performances} />
     </Section>
-    <Section title="Watch & Listen">
+    <Section title="Watch & Listen" accent>
       <PreviewButton label="See All Videos and Recordings" />
       <MediaCards mediaList={media} />
     </Section>

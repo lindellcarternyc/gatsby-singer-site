@@ -8,7 +8,6 @@ import { TextColor, AccentBackgroundColor } from '../../utils/colors'
 
 
 const Container = styledComponentsTS<{accent?: boolean}>(styledComponents.div)`
-  border: 1px solid ${TextColor};
   text-align: center;
   padding: 1rem;
   background: ${props => props.accent ? AccentBackgroundColor : 'white'}
