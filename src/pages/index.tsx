@@ -8,13 +8,15 @@ import {
 } from '../components'
 
 import Data from '../data'
-const { performances, media, news } = Data
+const { performances, media, news, about } = Data
 
 
 const IndexPage = () => (
   <div>
-    <Section accent>
-      About
+    <Section accent title="About Lindell">
+      {about.text.map(line => {
+        return <p key={line}>{line}</p>
+      })}
     </Section>
     <Section title="Performances">
       <PreviewButton label="See All Performances" />
