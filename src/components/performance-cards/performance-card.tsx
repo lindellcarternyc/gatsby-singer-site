@@ -18,7 +18,6 @@ import Card, {
 
 interface PerformanceCardProps {
   performance: PerformanceModel
-  column?: number
 }
 const PerformanceCard = (props: PerformanceCardProps) => {
   const {
@@ -26,7 +25,7 @@ const PerformanceCard = (props: PerformanceCardProps) => {
   } = props.performance
 
   return (
-    <Card column={props.column}>
+    <Card>
       <CardHeader
         title={title}
         meta={{ dates }}
