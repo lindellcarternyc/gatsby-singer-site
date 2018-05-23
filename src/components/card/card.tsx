@@ -4,20 +4,22 @@ import styledComponentsTS from 'styled-components-ts'
 
 // Utils
 import { Tablet } from '../../utils/breakpoints'
-import { TextColor } from '../../utils/colors'
+import { TextColor, AccentBackgroundColor } from '../../utils/colors'
 
 
-const Container = styledComponents.div`
+const Container = styledComponentsTS<{accent?: boolean}>(styledComponents.div)`
   border: 1px solid ${TextColor};
   text-align: center;
   padding: 1rem;
+  background: ${props => props.accent ? AccentBackgroundColor : 'white'}
 `
 
 interface CardProps {
   children: React.ReactNode
+  accent?: boolean
 }
 export default (props: CardProps) => (
-  <Container>
+  <Container accent={props.accent}>
     {props.children}
   </Container>
 )

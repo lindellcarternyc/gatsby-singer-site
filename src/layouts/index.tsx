@@ -5,6 +5,8 @@ import Helmet from 'react-helmet'
 import Header from '../components/header'
 // import './index.css'
 
+import { TextColor } from '../utils/colors'
+
 interface LayoutProps {
   children: () => React.ReactNode
   data: {
@@ -16,7 +18,11 @@ interface LayoutProps {
   }
 }
 const Layout = (props: LayoutProps) => (
-  <div>
+  <div
+    style={{
+      background: TextColor
+    }}
+  >
     <Helmet
       title={props.data.site.siteMetadata.title}
       meta={[

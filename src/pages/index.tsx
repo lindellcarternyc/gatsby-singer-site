@@ -1,14 +1,14 @@
 import * as React from 'react'
 
 import {
-  Grid, Card, MediaCards,
+  Grid, Card, MediaCards, NewsCards,
   PerformanceCards,
   PreviewButton,
   Section
 } from '../components'
 
 import Data from '../data'
-const { performances, media } = Data
+const { performances, media, news } = Data
 
 
 const IndexPage = () => (
@@ -26,6 +26,7 @@ const IndexPage = () => (
     </Section>
     <Section title="News">
       <PreviewButton label="See All Latest News" />
+      <NewsCards news={news} />
     </Section>
   </div>
 )
