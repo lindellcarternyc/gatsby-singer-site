@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import Helmet from 'react-helmet'
 
-import Header from '../components/header'
+import { Header, Footer } from '../components'
 // import './index.css'
 
 import { TextColor } from '../utils/colors'
@@ -20,7 +20,10 @@ interface LayoutProps {
 const Layout = (props: LayoutProps) => (
   <div
     style={{
-      background: TextColor
+      background: TextColor,
+      height: '100%',
+      minHeight: '100vh',
+      paddingBottom: '2rem'
     }}
   >
     <Helmet
@@ -42,6 +45,7 @@ const Layout = (props: LayoutProps) => (
     >
       {props.children()}
     </div>
+    <Footer />
   </div>
 )
 
