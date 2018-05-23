@@ -1,8 +1,7 @@
 import * as React from 'react'
-
 import styledComponents from 'styled-components'
 
-const typography = require('../utils/typography')
+import { TextColor } from '../utils/colors'
 
 const Button = styledComponents.button`
   outline: 0;
@@ -36,7 +35,7 @@ const Arrow = () => {
           x2={width}
           y1={y}
           y2={y}
-          stroke="black"
+          stroke={TextColor}
           strokeWidth={1}
         />
         <line
@@ -44,7 +43,7 @@ const Arrow = () => {
           x2={width}
           y1={y - 5}
           y2={y}
-          stroke="black"
+          stroke={TextColor}
           strokeWidth={1}
         />
         <line
@@ -52,7 +51,7 @@ const Arrow = () => {
           x2={width}
           y1={y + 5}
           y2={y}
-          stroke="black"
+          stroke={TextColor}
           strokeWidth={1}
         />
       </svg>

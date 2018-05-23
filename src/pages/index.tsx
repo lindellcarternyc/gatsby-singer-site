@@ -1,14 +1,14 @@
 import * as React from 'react'
 
 import {
-  Grid, Card,
+  Grid, Card, MediaCards,
   PerformanceCards,
   PreviewButton,
   Section
 } from '../components'
 
 import Data from '../data'
-const { performances } = Data
+const { performances, media } = Data
 
 
 const IndexPage = () => (
@@ -22,10 +22,7 @@ const IndexPage = () => (
     </Section>
     <Section title="Watch & Listen">
       <PreviewButton label="See All Videos and Recordings" />
-      <Grid>
-        <Card>Preview Video</Card>
-        <Card>Preview Audio</Card>
-      </Grid>
+      <MediaCards mediaList={media} />
     </Section>
     <Section title="News">
       <PreviewButton label="See All Latest News" />
