@@ -17,3 +17,12 @@ export const CardMetaText = CardText.extend`
   font-size: 0.75rem;
   font-weight: bold;
 `
+export const CardDetails = (props: { details: string[]}) => {
+  return (
+    <div>
+      {props.details.map((detail, idx) => {
+        return <CardMetaText key={idx}>{detail}</CardMetaText>
+      })}
+    </div>
+  )
+}

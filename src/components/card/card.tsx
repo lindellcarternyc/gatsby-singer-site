@@ -3,30 +3,21 @@ import styledComponents   from 'styled-components'
 import styledComponentsTS from 'styled-components-ts'
 
 // Utils
-const typography = require('../../utils/typography')
-const { options } = typography
-const { bodyColor } = options
-
 import { Tablet } from '../../utils/breakpoints'
+import { TextColor } from '../../utils/colors'
 
 
-const Container = styledComponentsTS<{column?: number}>(styledComponents.div)`
-  border: 1px solid ${bodyColor};
+const Container = styledComponents.div`
+  border: 1px solid ${TextColor};
   text-align: center;
   padding: 1rem;
-
-  @media(min-width: ${Tablet}) {
-    grid-column-end: span 2;
-    grid-column-start: ${props => props.column}
-  }
 `
 
 interface CardProps {
   children: React.ReactNode
-  column?: number
 }
 export default (props: CardProps) => (
-  <Container column={props.column}>
+  <Container>
     {props.children}
   </Container>
 )

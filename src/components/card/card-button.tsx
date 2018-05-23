@@ -1,11 +1,10 @@
 import * as React from 'react'
 import styledComponents from 'styled-components'
 
-const typography = require('../../../utils/typography')
-const bodyColor = typography.options.bodyColor
+import { TextColor } from '../../utils/colors'
 
 const Button = styledComponents.button`
-border: 1px solid ${bodyColor};
+border: 1px solid ${TextColor};
 background: transparent;
 font-size: 0.75rem;
 text-transform: uppercase;

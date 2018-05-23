@@ -1,12 +1,11 @@
 import * as React from 'react'
 import styledComponents from 'styled-components'
 
-const typography = require('../../../utils/typography')
-const bodyColor = typography.options.bodyColor
+import { TextColor } from '../../utils/colors'
 
 const CardDivider = styledComponents.hr`
-  background: ${bodyColor};
-  color: ${bodyColor};
+  background: ${TextColor};
+  color: ${TextColor};
 `
 
 export default CardDivider

@@ -1,8 +1,10 @@
 import * as React from 'react'
 
-import { DatesModel } from '../../../models/dates-model'
+import { DatesModel } from '../../models/dates-model'
 
-import { CardTitle, CardSubtitle, CardDates, CardDivider } from './'
+import CardDates from './card-dates'
+import CardDivider from './card-divider'
+import { CardTitle, CardSubtitle } from './card-typograghy'
 
 interface CardHeaderProps {
   title: string
