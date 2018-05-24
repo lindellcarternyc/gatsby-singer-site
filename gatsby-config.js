@@ -28,6 +28,13 @@ module.exports = {
         path: `${__dirname}/src/data/`
       }
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'about-pages',
+        path: `${__dirname}/src/pages/about/`
+      }
+    },
     'gatsby-transformer-json'
   ],
 }

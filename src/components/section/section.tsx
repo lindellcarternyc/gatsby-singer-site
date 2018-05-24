@@ -10,6 +10,7 @@ import { TextColor, AccentBackgroundColor } from '../../utils/colors'
 const Container = styledComponentsTS<{accent?: boolean}>(styledComponents.section)`
   margin-bottom: 1rem;
   padding: 1rem;
+  overflow: hidden;
   background: ${props => props.accent ? AccentBackgroundColor : 'white'}
 `
 
