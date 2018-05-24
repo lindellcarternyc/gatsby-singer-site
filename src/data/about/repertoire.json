@@ -1,0 +1,35 @@
+[
+  {
+    "composer": {
+      "name": "Bizet",
+      "operas": [
+        {
+          "title": "Carmen",
+          "roles": [
+            {"name": "Don Jose"}
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "composer": {
+      "name": "Verdi",
+      "operas":[
+        {
+          "title": "Aida",
+          "roles":[
+            {"name": "Radames"},
+            {"name": "Messenger"}
+          ]
+        },
+        {
+          "title": "Rigoletto",
+          "roles": [
+            {"name": "The Duke"}
+          ]
+        }
+      ]
+    }
+  }
+]
