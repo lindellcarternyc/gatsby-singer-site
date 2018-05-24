@@ -1,6 +1,5 @@
 import * as React from 'react'
-import styled from 'styled-components'
-import styledType from 'styled-components-ts'
+
 import { Section } from '../../components/section'
 
 import ResumeTable from '../../components/about/resume'
