@@ -1,29 +1,9 @@
 import * as React from 'react'
 
 import { Section } from '../../components'
-import { TextColor } from '../../utils/colors'
-
-import styled from 'styled-components'
-
-import {
-  ComposerName, OperaTitle, OperaRoles
-} from '../../components/repertoire/repertoire-typography'
-import OperaEntry from '../../components/repertoire/repertoire-opera-entry'
 import ComposerEntry from '../../components/repertoire/repertoire-composer-entry'
 
-import { OperaModel, ComposerModel } from '../../models/repertoire-model'
-
-const Carmen: OperaModel = {
-  title: 'Carmen',
-  roles: ['Don Jose']
-}
-
-const Bizet: ComposerModel = {
-  name: 'Bizet',
-  operas: [
-    { ...Carmen }
-  ]
-}
+import { ComposerModel } from '../../models/repertoire-model'
 
 interface RepertoirePageProps {
   data: {

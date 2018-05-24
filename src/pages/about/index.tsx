@@ -1,14 +1,6 @@
 import * as React from 'react'
-import styledComponents from 'styled-components'
 
 import { Section } from '../../components'
-import { TextColor } from '../../utils/colors'
-import AboutLayout from '../../layouts/about'
-
-import {
-  AboutNavListItem,
-  AboutNavList
-} from '../../components/about/nav/about-nav'
 
 interface AboutPageProps {
   data: {
