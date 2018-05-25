@@ -26,13 +26,6 @@ interface NewsJson {
     }
   }>
 }
-
-interface IndexPageProps {
-  data: {
-    allNewsJson: NewsJson
-  }
-}
-
 const parseNews = (data: NewsJson): NewsModel[] => {
   const { edges } = data
 
@@ -50,6 +43,12 @@ const parseNews = (data: NewsJson): NewsModel[] => {
       }
     }
   })
+}
+
+interface IndexPageProps {
+  data: {
+    allNewsJson: NewsJson
+  }
 }
 
 
