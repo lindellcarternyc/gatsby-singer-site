@@ -1,10 +1,10 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
 
-import Menu from '../menu'
+import Menu from './components/menu'
 import { Container, Wrapper, HeaderButton, Title } from './components'
 
-import { AccentColor }  from '../../utils/colors'
+import { AccentColor }  from '../../../utils/colors'
 
 interface HeaderProps {
   siteTitle: string

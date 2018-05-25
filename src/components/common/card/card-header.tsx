@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { DatesModel } from '../../models/dates-model'
+import { DatesModel } from '../../../models/dates-model'
 
 import CardDates from './card-dates'
 import CardDivider from './card-divider'

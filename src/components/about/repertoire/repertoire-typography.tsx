@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import { TextColor } from '../../utils/colors'
+import { TextColor } from '../../../utils/colors'
 
 export const ComposerName = styled.h3`
   border-top: 1px solid ${TextColor};

@@ -3,8 +3,8 @@ import styledComponents   from 'styled-components'
 import styledComponentsTS from 'styled-components-ts'
 
 // Utils
-import { Tablet } from '../../utils/breakpoints'
-import { TextColor, AccentBackgroundColor } from '../../utils/colors'
+import { Tablet } from '../../../utils/breakpoints'
+import { TextColor, AccentBackgroundColor } from '../../../utils/colors'
 
 
 const Container = styledComponentsTS<{accent?: boolean}>(styledComponents.div)`
@@ -14,11 +14,11 @@ const Container = styledComponentsTS<{accent?: boolean}>(styledComponents.div)`
 `
 
 interface CardProps {
-  children: React.ReactNode
+  render: () => JSX.Element | JSX.Element[]
   accent?: boolean
 }
 export default (props: CardProps) => (
   <Container accent={props.accent}>
-    {props.children}
+    {props.render()}
   </Container>
 )

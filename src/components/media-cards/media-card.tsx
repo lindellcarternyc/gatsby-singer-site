@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import styledComponents from 'styled-components'
 
-import Card, { CardHeader, CardButton, CardDetails} from '../card'
+import Card, { CardHeader, CardButton, CardDetails } from '../common/card'
 
 import MediaButton from './media-button'
 import MediaImage from './media-image'
@@ -21,18 +21,24 @@ const MediaCard = (props: MediaModel): JSX.Element => {
     title, subtitle, date, image, details
   } = props
   return (
-    <Card>
-      <CardHeader
-        title={title}
-        subtitle={subtitle}
-        meta={{ dates: date }}
-      />
-      <MediaWrapper>
-        <MediaImage src={image} alt={image} />
-        <MediaButton />
-      </MediaWrapper>
-      {details !== undefined && <CardDetails details={details} />}
-    </Card>
+    <Card
+      render={() => {
+        return (
+          <div>
+            <CardHeader
+              title={title}
+              subtitle={subtitle}
+              meta={{ dates: date }}
+            />
+            <MediaWrapper>
+              <MediaImage src={image} alt={image} />
+              <MediaButton />
+            </MediaWrapper>
+            {details !== undefined && <CardDetails details={details} />}
+          </div>
+        )
+      }}
+    />
   )
 }
 

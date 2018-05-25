@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import Grid from '../grid'
+import Grid from '../common/grid'
 import PerformanceCard from './performance-card'
 
 import { PerformanceModel } from '../../models/performance-model'

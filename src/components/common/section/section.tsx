@@ -5,7 +5,7 @@ import styledComponentsTS from 'styled-components-ts'
 
 import SectionTitle from './section-title'
 
-import { TextColor, AccentBackgroundColor } from '../../utils/colors'
+import { TextColor, AccentBackgroundColor } from '../../../utils/colors'
 
 const Container = styledComponentsTS<{accent?: boolean}>(styledComponents.section)`
   margin-bottom: 1rem;
@@ -14,8 +14,8 @@ const Container = styledComponentsTS<{accent?: boolean}>(styledComponents.sectio
   background: ${props => props.accent ? AccentBackgroundColor : 'white'}
 `
 
-interface SectionProps {
-  children: React.ReactNode
+export interface SectionProps {
+  children?: React.ReactNode
   title?: string
   accent?: boolean
 }

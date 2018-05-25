@@ -6,7 +6,7 @@ import {
   ResumeOperaCell,
   ResumeRoleCell
 } from './resume-table-cell'
-import { ResumeEntry } from '../models'
+import { ResumeEntry } from '../../../models/resume-model'
 
 const ResumeTableRow = (props: ResumeEntry) => {
   const { role, opera, company, date } = props

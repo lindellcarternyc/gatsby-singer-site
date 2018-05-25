@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styledComponents from 'styled-components'
 
-import { TextColor } from '../utils/colors'
+import { TextColor } from '../../utils/colors'
 
 const Button = styledComponents.button`
   outline: 0;

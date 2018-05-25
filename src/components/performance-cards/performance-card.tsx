@@ -14,7 +14,7 @@ import Card, {
   CardButton,
   CardHeader,
   CardText
-} from '../card'
+} from '../common/card'
 
 interface PerformanceCardProps {
   performance: PerformanceModel
@@ -25,16 +25,22 @@ const PerformanceCard = (props: PerformanceCardProps) => {
   } = props.performance
 
   return (
-    <Card>
-      <CardHeader
-        title={title}
-        meta={{ dates }}
-        subtitle={subtitle}
-      />
-      <CardText>{venue}</CardText>
-      <CardText>{location.city}, {location.region}</CardText>
-      <CardButton label="More Info" />
-    </Card>
+    <Card
+      render={() => {
+          return (
+            <div>
+              <CardHeader
+                title={title}
+                meta={{ dates }}
+                subtitle={subtitle}
+              />
+              <CardText>{venue}</CardText>
+              <CardText>{location.city}, {location.region}</CardText>
+              <CardButton label="More Info" />
+            </div>
+          )
+      }}
+    />
   )
 }
 

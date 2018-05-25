@@ -3,7 +3,7 @@ import styledComponents from 'styled-components'
 import styledComponentsTS from 'styled-components-ts'
 
 // Utils
-import { Tablet } from '../utils/breakpoints'
+import { Tablet } from '../../utils/breakpoints'
 
 const Column = styledComponentsTS<{column?: number}>(styledComponents.div)`
   @media(min-width: ${Tablet}) {

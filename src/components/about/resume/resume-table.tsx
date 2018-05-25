@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import TableRow from './resume-table-row'
 
-import { ResumeEntry } from './models'
+import { ResumeEntry } from '../../../models/resume-model'
 
 const ResumeTable = (props: { entries: ResumeEntry[] }) => {
   return (

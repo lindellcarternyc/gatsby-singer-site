@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import Grid from '../grid'
+import Grid from '../common/grid'
 import NewsCard from './news-card'
 
 import { NewsModel } from '../../models/news-model'

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { ComposerName } from './repertoire-typography'
 import OperaEntry from './repertoire-opera-entry'
 
-import { ComposerModel } from '../../models/repertoire-model'
+import { ComposerModel } from '../../../models/repertoire-model'
 
 const Wrapper = styled.div`
   margin-bottom: 1rem;

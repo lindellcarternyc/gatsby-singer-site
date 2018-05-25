@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `
 
-import { OperaModel } from '../../models/repertoire-model'
+import { OperaModel } from '../../../models/repertoire-model'
 const OperaEntry = (props: OperaModel) => {
   const { title, roles } = props
   return (

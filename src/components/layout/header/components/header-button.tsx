@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import styledComponents from 'styled-components'
 
-import '../../../assets/css/hamburger.css'
+import '../../../../assets/css/hamburger.css'
 
 const Button = styledComponents.button`
   margin-top: 0.5rem;

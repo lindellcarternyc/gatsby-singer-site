@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import Grid from '../grid'
+import Grid from '../common/grid'
 import MediaCard from './media-card'
 
 import { MediaModel } from '../../models/media-model'
