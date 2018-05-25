@@ -1,11 +1,10 @@
 import * as React from 'react'
 
 import {
-  Grid, Card, MediaCards, NewsCards,
-  PerformanceCards,
-  PreviewButton,
-  Section
+  Preview
 } from '../components'
+
+import { Section, SectionProps } from '../components/common/section'
 
 import Data from '../data'
 const { performances, media } = Data
@@ -30,13 +29,6 @@ interface NewsJson {
 
 interface IndexPageProps {
   data: {
-    allAboutTextJson: {
-      edges: Array<{
-        node: {
-          line: string
-        }
-      }>
-    },
     allNewsJson: NewsJson
   }
 }
@@ -60,35 +52,34 @@ const parseNews = (data: NewsJson): NewsModel[] => {
   })
 }
 
+
+
 const IndexPage = (props: IndexPageProps) => {
   const { data } = props
 
   const {
-    allAboutTextJson,
     allNewsJson
   } = data
   const news = parseNews(allNewsJson)
 
   return (
     <div>
-      <Section accent title="About Lindell">
-        {allAboutTextJson.edges.map(edge => {
-          const line = edge.node.line
-          return <p key={line}>{line}</p>
-        })}
-      </Section>
-      <Section title="Performances">
-        <PreviewButton label="See All Performances" />
-        <PerformanceCards performances={performances} />
-      </Section>
-      <Section title="Watch & Listen" accent>
-        <PreviewButton label="See All Videos and Recordings" />
-        <MediaCards mediaList={media} />
-      </Section>
-      <Section title="News">
-        <PreviewButton label="See All Latest News" />
-        <NewsCards news={news} />
-      </Section>
+      <Preview
+        title="Performances"
+        previewLabel="See All Performances"
+        model={performances}
+      />
+      <Preview
+        title="Watch & Listen"
+        accent
+        previewLabel="See All Videos and Recordings"
+        model={media}
+      />
+      <Preview
+        title="News"
+        previewLabel="See all Latest News"
+        model={news}
+      />
     </div>
   )
 }
@@ -97,13 +88,6 @@ export default IndexPage
 
 export const query = graphql`
   query IndexPageQuery {
-    allAboutTextJson {
-      edges {
-        node {
-          line
-        }
-      }
-    }
     allNewsJson {
       edges {
         node {

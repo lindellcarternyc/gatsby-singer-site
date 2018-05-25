@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { Section } from '../../components/section'
+import { Section } from '../../components/common/section'
 
 import ResumeTable from '../../components/about/resume'
 

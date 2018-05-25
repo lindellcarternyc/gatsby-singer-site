@@ -1,8 +1,7 @@
 import * as React from 'react'
 
-import { Section } from '../../components'
-import ComposerEntry from '../../components/repertoire/repertoire-composer-entry'
-
+import { Section } from '../../components/common/section'
+import { Repertoire } from '../../components/about'
 import { ComposerModel } from '../../models/repertoire-model'
 
 interface RepertoirePageProps {
@@ -26,23 +25,20 @@ interface RepertoirePageProps {
 }
 const RepertoirePage = (props: RepertoirePageProps) => {
   const { data } = props
+  const composers: ComposerModel[] = data.allRepertoireJson.edges.map(({ node: { composer } }) => {
+    return {
+      name: composer.name,
+      operas: composer.operas.map(({ title, roles }) => {
+        return {
+          title,
+          roles: roles.map(r => r.name)
+        }
+      })
+    }
+  })
   return (
     <Section>
-      {data.allRepertoireJson.edges.map(({ node }) => {
-        const { composer } = node
-        return (
-          <ComposerEntry
-            key={composer.name}
-            name={composer.name}
-            operas={composer.operas.map(opera => {
-              return {
-                title: opera.title,
-                roles: opera.roles.map(role => role.name)
-              }
-            })}
-          />
-        )
-      })}
+      <Repertoire composers={composers}/>
     </Section>
   )
 }
