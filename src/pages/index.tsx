@@ -4,11 +4,10 @@ import {
   Preview
 } from '../components'
 
-import { Section, SectionProps } from '../components/common/section'
-
 import Data from '../data'
-const { performances, media } = Data
+const { media } = Data
 import { NewsModel } from '../models/news-model'
+import { PerformanceModel } from '../models/performance-model'
 
 interface NewsJson {
   edges: Array<{
@@ -45,9 +44,50 @@ const parseNews = (data: NewsJson): NewsModel[] => {
   })
 }
 
+interface PerformancesJson {
+  edges: Array<{
+    node: {
+      performance: {
+        dates: {
+          year: string
+          month: string
+          days: Array<{
+            day: string
+          }>
+        }
+        location: {
+          city: string
+          region: string
+        }
+        venue: string
+        title: string
+        subtitle: string
+      }
+    }
+  }>
+}
+const parsePerformances = (data: PerformancesJson): PerformanceModel[] => {
+  return data.edges.map(({ node }) => {
+    const { performance } = node
+    const { dates, title, subtitle, venue, location } = performance
+    return {
+      title,
+      subtitle,
+      venue,
+      location,
+      dates: {
+        year: dates.year,
+        month: dates.month,
+        days: dates.days.map(d => d.day)
+      }
+    }
+  })
+}
+
 interface IndexPageProps {
   data: {
     allNewsJson: NewsJson
+    allPerformancesJson: PerformancesJson
   }
 }
 
@@ -57,9 +97,11 @@ const IndexPage = (props: IndexPageProps) => {
   const { data } = props
 
   const {
-    allNewsJson
+    allNewsJson,
+    allPerformancesJson
   } = data
   const news = parseNews(allNewsJson)
+  const performances = parsePerformances(allPerformancesJson)
 
   return (
     <div>
@@ -100,6 +142,28 @@ export const query = graphql`
             }
           }
           content
+        }
+      }
+    }
+    allPerformancesJson {
+      edges {
+        node {
+          performance {
+            dates {
+              year
+              month
+              days {
+                day
+              }
+            }
+            location {
+              city
+              region
+            }
+            venue
+            title
+            subtitle
+          }
         }
       }
     }

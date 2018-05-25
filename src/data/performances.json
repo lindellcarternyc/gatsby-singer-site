@@ -1,0 +1,58 @@
+[
+  {
+    "performance": {
+      "dates": {
+        "year": "2018",
+        "month": "May",
+        "days": [
+          {"day": "8"}
+        ]
+      },
+      "venue": "Regina Opera",
+      "location": {
+        "city": "Brooklyn",
+        "region": "NY"
+      },
+      "title": "Aida",
+      "subtitle": "Radames"
+    }
+  },
+  {
+    "performance":{
+      "dates":{
+        "year":"2018",
+        "month": "May",
+        "days": [
+          {"day": "13"},
+          {"day": "19"}
+        ]
+      },
+      "venue": "Regina Opera",
+      "location":{
+        "city": "Brooklyn",
+        "region":"NY"
+      },
+      "title": "Aida",
+      "subtitle": "The Messenger"
+    }
+  },
+  {
+    "performance": {
+      "dates":{
+        "year":"2018",
+        "month":"Jun",
+        "days":[
+          {"day": "12"},
+          {"day": "15"}
+        ]
+      },
+      "venue": "Resonanz Opera",
+      "location": {
+        "city": "Mentnor",
+        "region": "OH"
+      },
+      "title": "Rigoletto",
+      "subtitle": "The Duke"
+    }
+  }
+]
