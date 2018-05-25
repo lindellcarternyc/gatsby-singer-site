@@ -2,9 +2,7 @@ import * as React from 'react'
 
 import Helmet from 'react-helmet'
 
-import { Header, Footer } from '../components'
-import AboutNav from '../components/about/nav'
-// import './index.css'
+import { Header, AboutNav, Footer } from '../components/layout'
 
 import { TextColor } from '../utils/colors'
 
