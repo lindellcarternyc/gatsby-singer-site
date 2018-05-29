@@ -45,15 +45,12 @@ const parseNews = (data: NewsJson): NewsModel[] => {
 }
 
 interface PerformancesJson {
-  edges: Array<{
-    node: {
-      performance: {
+    edges: Array<{
+      node: {
         dates: {
           year: string
           month: string
-          days: Array<{
-            day: string
-          }>
+          days: Array<{ day: string }>
         }
         location: {
           city: string
@@ -63,13 +60,12 @@ interface PerformancesJson {
         title: string
         subtitle: string
       }
-    }
-  }>
+    }>
 }
 const parsePerformances = (data: PerformancesJson): PerformanceModel[] => {
+  console.log(data)
   return data.edges.map(({ node }) => {
-    const { performance } = node
-    const { dates, title, subtitle, venue, location } = performance
+    const { dates, title, subtitle, venue, location } = node
     return {
       title,
       subtitle,
@@ -100,9 +96,10 @@ const IndexPage = (props: IndexPageProps) => {
     allNewsJson,
     allPerformancesJson
   } = data
+  
+
   const news = parseNews(allNewsJson)
   const performances = parsePerformances(allPerformancesJson)
-
   return (
     <div>
       <Preview
@@ -148,22 +145,18 @@ export const query = graphql`
     allPerformancesJson {
       edges {
         node {
-          performance {
-            dates {
-              year
-              month
-              days {
-                day
-              }
-            }
-            location {
-              city
-              region
-            }
-            venue
-            title
-            subtitle
+          dates {
+            year
+            month
+            days { day }
           }
+          location {
+            city
+            region
+          }
+          venue
+          title
+          subtitle
         }
       }
     }

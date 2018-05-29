@@ -1,0 +1,16 @@
+{
+  "dates": {
+    "year": "2018",
+    "month": "May",
+    "days": [
+      { "day": "8" }
+    ]
+  },
+  "venue": "Regina Opera",
+  "location": {
+    "city": "Brooklym",
+    "region": "NY"
+  },
+  "title": "AIDA",
+  "subtitle": "Radames"
+}

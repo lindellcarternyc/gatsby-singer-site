@@ -1,0 +1,17 @@
+{
+  "dates": {
+    "year": "2018",
+    "month": "May",
+    "days": [
+      { "day": "13" },
+      { "day": "19" }
+    ]
+  },
+  "venue": "Regina Opera",
+  "location": {
+    "city": "Brooklym",
+    "region": "NY"
+  },
+  "title": "AIDA",
+  "subtitle": "The Messenger"
+}
