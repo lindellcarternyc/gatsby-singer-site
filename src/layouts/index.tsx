@@ -3,8 +3,48 @@ import * as React from 'react'
 import Helmet from 'react-helmet'
 
 import { Header, AboutNav, Footer } from '../components/layout'
+import TabNavigation, { TabNavProps } from '../components/layout/tab-nav/tab-nav'
 
 import { TextColor } from '../utils/colors'
+
+const AboutNavProps: TabNavProps = {
+  tabs: [
+    {
+      to: '/about/',
+      label: 'Bio'
+    },
+    {
+      to: '/about/resume/',
+      label: 'Resume'
+    },
+    {
+      to: '/about/repertoire/',
+      label: 'Repertoire'
+    }
+  ]
+}
+
+const WatchAndListenNavProps: TabNavProps = {
+  tabs: [
+    {
+      to: '/watch-&-listen/videos',
+      label: 'Videos'
+    }
+  ]
+}
+
+const renderTabNav = (pathname: string): JSX.Element | null => {
+  let props: TabNavProps | null = null
+  if ( pathname.startsWith('/about/')) {
+    props = AboutNavProps
+  } else if ( pathname.startsWith('/watch-&-listen/') ) {
+    props = WatchAndListenNavProps
+  }
+  if ( props === null ) {
+    return null
+  }
+  return <TabNavigation { ...props }/>
+}
 
 interface LayoutProps {
   children: () => React.ReactNode
@@ -45,7 +85,7 @@ const Layout = (props: LayoutProps) => {
           paddingTop: '55px'
         }}
       >
-        {props.location.pathname.startsWith('/about/') && <AboutNav />}
+        {renderTabNav(props.location.pathname)}
         {props.children()}
       </div>
       <Footer />
