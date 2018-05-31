@@ -7,7 +7,9 @@ import Card, { CardHeader, CardButton, CardDetails } from '../common/card'
 import MediaButton from './media-button'
 import MediaImage from './media-image'
 
-import { MediaModel } from '../../models/media-model'
+import { Video } from '../video'
+
+import { MediaModel, MediaType } from '../../models/media-model'
 
 const MediaWrapper = styledComponents.div`
   width: 100%;
@@ -18,8 +20,9 @@ const MediaWrapper = styledComponents.div`
 
 const MediaCard = (props: MediaModel): JSX.Element => {
   const {
-    title, subtitle, date, image, details
+    title, subtitle, date, url, details, type
   } = props
+  console.log(props)
   return (
     <Card
       render={() => {
@@ -31,8 +34,15 @@ const MediaCard = (props: MediaModel): JSX.Element => {
               meta={{ dates: date }}
             />
             <MediaWrapper>
-              <MediaImage src={image} alt={image} />
-              <MediaButton />
+              {type === MediaType.Video &&
+                <Video url={url} />
+              }
+              {type === MediaType.Audio &&
+                <>
+                  <MediaImage src={url} alt={url} />
+                  <MediaButton />
+                </>
+              }
             </MediaWrapper>
             {details !== undefined && <CardDetails details={details} />}
           </div>

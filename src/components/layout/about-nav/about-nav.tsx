@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Link, { GatsbyLinkProps}  from 'gatsby-link'
+import Link from 'gatsby-link'
 import styled from 'styled-components'
 import styledTS from 'styled-components-ts'
 
@@ -16,15 +16,15 @@ const AboutNavList = styled.ul`
   padding-left: 1rem;
 `
 
-import AboutNavLink from './about-nav-link'
+import Tab from '../tab-nav/tab'
 
 const AboutNav = (): JSX.Element => {
   return (
     <nav>
       <AboutNavList>
-        <AboutNavLink to="/about/" label="Bio"/>
-        <AboutNavLink to="/about/resume/" label="Resume" />
-        <AboutNavLink to="/about/repertoire/" label="Repertoire" />
+        <Tab to="/about/" label="Bio"/>
+        <Tab to="/about/resume/" label="Resume" />
+        <Tab to="/about/repertoire/" label="Repertoire" />
       </AboutNavList>
     </nav>
   )
