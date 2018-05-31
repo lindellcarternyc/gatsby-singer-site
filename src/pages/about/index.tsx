@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { Section } from '../../components'
+import {Section} from '../../components/common/section'
 
 interface AboutPageProps {
   data: {
