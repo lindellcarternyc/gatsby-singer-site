@@ -1,14 +1,14 @@
 import { DatesModel } from './dates-model'
 
 export enum MediaType {
-  Audio,
-  Video
+  Audio = 'audio',
+  Video = 'video'
 }
 export interface MediaModel {
   date: DatesModel
   title: string
   subtitle?: string
   type: MediaType
-  image?: string
+  url?: string
   details?: string[]
 }
